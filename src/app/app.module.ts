@@ -1,13 +1,15 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {Http, HttpModule} from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Http, HttpModule } from '@angular/http';
 
-import {AppComponent} from './app.component';
-import {RawDataComponent} from './components/rawdata/rawdata.component';
-import {StatusComponent} from './components/status/status.component';
-import {OrdersStompService, ordersStompServiceFactory} from "./stomp-services/orders-stomp.service";
-import {StocksStompService, stocksStompServiceFactory} from "./stomp-services/stocks-stomp.service";
+import { SharedModule } from './shared/shared.module';
+
+import { AppComponent } from './app.component';
+import { RawDataComponent } from './components/rawdata/rawdata.component';
+import { StatusComponent } from './components/status/status.component';
+import { OrdersStompService, ordersStompServiceFactory } from "./stomp-services/orders-stomp.service";
+import { StocksStompService, stocksStompServiceFactory } from "./stomp-services/stocks-stomp.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import {StocksStompService, stocksStompServiceFactory} from "./stomp-services/st
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    SharedModule
   ],
   providers: [
     {

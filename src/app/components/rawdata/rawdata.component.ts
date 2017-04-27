@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import {Message} from '@stomp/stompjs';
+import { Message } from '@stomp/stompjs';
 
 import { Subscription } from 'rxjs/Subscription';
-import {OrdersStompService} from "../../stomp-services/orders-stomp.service";
-import {StocksStompService} from "../../stomp-services/stocks-stomp.service";
+import { OrdersStompService } from "../../stomp-services/orders-stomp.service";
+import { StocksStompService } from "../../stomp-services/stocks-stomp.service";
+import { Comp1Component } from "../../shared/comp1/comp1"
 
 @Component({
   selector: 'app-rawdata',
